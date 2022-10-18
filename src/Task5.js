@@ -2,21 +2,23 @@ import React from "react";
 import { useState } from "react";
 
 export const Task5 = () => {
-  const [formStyle, setFormStyle] = useState();
-  const [buttonStyle, setButtonStyle] = useState();
-  const [flag, setFlag] = useState("true");
+  const [formStyle, setFormStyle] = useState(); //state to change the style of form tag
+  const [buttonStyle, setButtonStyle] = useState();  //state to change the style of button tag
+  const [flag, setFlag] = useState(true); //made flag variable to make the button to toggle
   const changeTheme = (e) => {
-    if (flag === "true") {
-      setFormStyle({
+    e.preventDefault();
+    if (flag) {
+        //to chnage the form style
+      setFormStyle({  
         backgroundColor: "black",
         color: "white",
       });
+      //to chnage the button style
       setButtonStyle({
         backgroundColor: "black",
         color: "white",
       });
-      setFlag("false");
-      console.log(flag);
+      setFlag(false);
     } 
     else {
       setFormStyle({
@@ -27,7 +29,7 @@ export const Task5 = () => {
         backgroundColor: "dodgerblue",
         color: "white",
       });
-      setFlag("true");
+      setFlag(true);
     }
   };
 
@@ -44,10 +46,11 @@ export const Task5 = () => {
         <input className="inp" placeholder="Enter Text" />
         <input className="inp" placeholder="Enter Text" />
         <input className="inp" placeholder="Enter Text" />
-      </form>
-      <button className="btn" onClick={changeTheme} style={buttonStyle}>
+        <button className="btn" onClick={changeTheme} style={buttonStyle}>
         THEME
       </button>
+      </form>
+      
     </div>
   );
 };

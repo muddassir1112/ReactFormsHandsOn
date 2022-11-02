@@ -26,6 +26,8 @@ const [checked, setChecked] = useState([]);
 
   return (
     <div className="app">
+      <h1><u>Question-2</u></h1>
+      <h2>Make 3 Checkboxes of Hobbies print only selected hobbies</h2>
       <div className="checkList">
         <div className="title">Your Hobbies:</div>
         <div className="list-container">

@@ -41,7 +41,7 @@ const [checked, setChecked] = useState([]);
       </div>
 
       <div>
-        {`Items checked are: ${checkedItems}`}
+        {`Selected Hobbies: ${checkedItems}`}
       </div>
     </div>
   );

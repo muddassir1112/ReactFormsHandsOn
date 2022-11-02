@@ -16,9 +16,9 @@ export const Task3 = () => {
     <div className='container'>
         <h2><u>Question-3</u></h2>
         <h2>Create a Text area and convert the text into uppercase using button</h2>
-        <textarea placeholder='Enter your text' onChange={textHandle}/>
+        <textarea className='inp' placeholder='Enter your text' onChange={textHandle}/>
         <br></br>
-        <button onClick={convert} style={{rows:'4',cols:'50'}}>toUpperCase</button>
+        <button className='btn' onClick={convert} style={{rows:'4',cols:'50'}}>toUpperCase</button>
         <p>{UpperStr}</p>
     </div>
   )
